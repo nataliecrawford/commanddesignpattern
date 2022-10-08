@@ -24,10 +24,18 @@ public class InputHandler {
          * because I can't test it without the
          * specific commands being made lol
          */
-        commands.put("view", ViewCommand(document));
-        commands.put("append", AppendCommand(document));
-        commands.put("write", WriteCommand(document));
-        commands.put("save", SaveCommand(document));
+
+        // create new instances of the commands themselves
+        Command viewCommand = new ViewCommand(document);
+        Command appendCommand = new AppendCommand(document);
+        Command writeCommand = new WriteCommand(document);
+        Command saveCommand = new SaveCommand(document);
+
+        // add those commands into the hashmap
+        commands.put("view", viewCommand);
+        commands.put("append", appendCommand);
+        commands.put("write", writeCommand);
+        commands.put("save", saveCommand);
     }
 
     /**
@@ -44,5 +52,5 @@ public class InputHandler {
         }
     }
 
-    // apparently i need two commits, but i did it all in one commit so here's a comment
+    // apparently i need two commits, but i did it all in one commit, so here's a comment
 }
