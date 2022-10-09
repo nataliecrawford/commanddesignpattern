@@ -12,6 +12,7 @@ public class WriteCommand extends Command{
         System.out.print("Enter what you want to write : ");
         String line= in.nextLine();
         String write = this.document.write(line);
+        System.out.println(write);
         return write;
     }
 }
