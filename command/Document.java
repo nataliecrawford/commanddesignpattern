@@ -2,11 +2,19 @@ package command;
 
 import java.util.ArrayList;
 
+/**
+ * A document object
+ * @author Mia Silver
+ */
 public class Document {
     
     private String fileName;
     private ArrayList<String> lines;
 
+    /**
+     * Creates a new document or reads an existing document
+     * @param fileName the file name of the document
+     */
     public Document(String fileName) {
         this.fileName = fileName;     
         lines = FileManipulator.readFile(fileName);
@@ -22,12 +30,14 @@ public class Document {
         for(int i = 0; i < length; i++) {
             str += "_";
         }
+        str += "\n";
 
         for(int i = 0; i < lines.size(); i++) {
             str += "\n|     " + lines.get(i);
             for(int j = 6 + lines.get(i).length(); j < length; j++) {
                 str += " ";
             }
+            str += "|";
         }
         
         str += "\n";
