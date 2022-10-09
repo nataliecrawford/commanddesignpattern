@@ -1,5 +1,5 @@
-import command.Command;
-
+package command;
+import java.util.Scanner;
 public class WriteCommand extends Command{
     private Scanner in;
 
@@ -8,7 +8,10 @@ public class WriteCommand extends Command{
     }
 
     public String execute(){
-        String write = this.doc.write();
+        Scanner in= new Scanner(System.in);
+        System.out.print("Enter what you want to write : ");
+        String line= in.nextLine();
+        String write = this.document.write(line);
         return write;
     }
 }
