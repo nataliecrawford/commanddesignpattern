@@ -19,6 +19,7 @@ public class ViewCommand extends Command {
      */
     public String execute(){
         String view = this.document.view();
+        System.out.println(view);
         return view;
     } 
 }

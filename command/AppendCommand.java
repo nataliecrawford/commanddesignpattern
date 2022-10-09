@@ -28,7 +28,7 @@ public class AppendCommand extends Command{
         System.out.print("Enter what you want to append : ");
         String str= in.nextLine();
         String append = this.document.append(str);
-        in.close();
+        System.out.println(append);
         return append;        
     }
 }
