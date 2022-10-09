@@ -28,8 +28,9 @@ public class Document {
         String str = ""; 
         int length = findLongest() + 12;
         for(int i = 0; i < length; i++) {
-            str += "-";
+            str += "_";
         }
+        str += "\n";
 
         for(int i = 0; i < lines.size(); i++) {
             str += "\n|     " + lines.get(i);
@@ -41,7 +42,7 @@ public class Document {
         
         str += "\n";
         for(int i = 0; i < length; i++) {
-            str += "-";
+            str += "_";
         }
         return str;
     }
